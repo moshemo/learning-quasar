@@ -1,25 +1,73 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <Header />
-    <Footer />
-    <Drawer />
-    <Container />
+  <q-layout view="lhh lpR lff">
+    <Header @leftDrawerToggled="updateLeftDrawer()" :navLinks="navLinks" />
+
+    <LeftDrawer :isOpen="isLeftDrawerOpen" :navLinks="navLinks" />
+    <PageContainer />
+    <RightDrawer :isOpen="isRightDrawerOpen" />
+
+    <Footer :navLinks="navLinks" />
   </q-layout>
 </template>
 
 <script>
-import Container from "./container";
-import Drawer from "./drawer";
-import Footer from "./footer";
-import Header from "./header";
+import Header from "./main/header";
+import LeftDrawer from "./main/left-drawer";
+import PageContainer from "./main/page-container";
+import RightDrawer from "./main/right-drawer";
+import Footer from "./main/footer";
 
 export default {
   components: {
-    Container,
-    Drawer,
-    Footer,
-    Header
+    Header,
+    LeftDrawer,
+    PageContainer,
+    RightDrawer,
+    Footer
   },
-  name: "Layout"
+  methods: {
+    updateLeftDrawer() {
+      this.isLeftDrawerOpen = !this.isLeftDrawerOpen;
+    }
+  },
+  name: "Layout",
+  data() {
+    return {
+      isLeftDrawerOpen: false,
+      isRightDrawerOpen: true,
+      navLinks: [
+        {
+          label: "Home",
+          icon: "home",
+          to: "/"
+        },
+        {
+          label: "News",
+          icon: "language",
+          to: "/news"
+        },
+        {
+          label: "Advertise",
+          icon: "dvr",
+          to: "/advertise"
+        },
+        {
+          label: "Newsletter",
+          icon: "email",
+          to: "/newsletter"
+        },
+        {
+          label: "About",
+          icon: "info",
+          to: "/about"
+        },
+        {
+          label: "Contact",
+          icon: "call",
+          to: "/contact"
+        }
+      ]
+    };
+  }
 };
 </script>

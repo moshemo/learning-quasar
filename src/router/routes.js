@@ -12,6 +12,22 @@ const routes = [
         component: () => import("pages/news.vue")
       },
       {
+        path: "/advertise",
+        component: () => import("pages/advertise.vue")
+      },
+      {
+        path: "/newsletter",
+        component: () => import("pages/newsletter.vue")
+      },
+      {
+        path: "/about",
+        component: () => import("pages/about.vue")
+      },
+      {
+        path: "/contact",
+        component: () => import("pages/contact.vue")
+      },
+      {
         path: "/admin",
         component: () => import("pages/admin")
       }

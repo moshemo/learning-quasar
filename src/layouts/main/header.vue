@@ -1,27 +1,27 @@
 <template>
-  <q-header class="bg-blue-8 q-px-md">
+  <q-header id="header-layout--main" class="bg-blue-8 q-px-md">
     <q-toolbar>
       <q-toolbar-title>startupReporter</q-toolbar-title>
       <q-space />
       <template v-for="(navLink, index) in navLinks">
         <template v-if="navLink.subLinks">
-          <q-btn-dropdown 
-            :label="navLink.label" 
+          <q-btn-dropdown
+            :label="navLink.label"
             :key="index"
-            :to="navLink.to" 
-            class="q-pl-lg q-pr-md q-py-md gt-sm" 
-            size="16px" 
-            flat 
+            :to="navLink.to"
+            class="q-pl-lg q-pr-md q-py-md gt-sm"
+            size="16px"
+            flat
             stretch
           >
             <q-list>
-              <q-item 
-                v-for="(subLink, subIndex) in navLink.subLinks"  
-                :key="subIndex" 
+              <q-item
+                v-for="(subLink, subIndex) in navLink.subLinks"
+                :key="subIndex"
                 :to="subLink.to"
-                class="q-item--custom"
-                clickable 
-                v-close-popup 
+                class="q-item--header_custom"
+                clickable
+                v-close-popup
               >
                 <q-item-section>
                   <q-item-label>{{subLink.label}}</q-item-label>
@@ -77,7 +77,19 @@ export default {
   }
 
 <style lang="scss">
-  .q-item--custom:hover {
-    background-color: hsla(180, 50, 50, 0.1);
+/* body {
+  .q-menu {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
+} */
+.q-item--header_custom:hover {
+  background-color: $blue-8;
+  color: #fff;
+  font-weight: 600;
+
+  .q-focus-helper {
+    background-color: inherit !important;
+  }
+}
 </style>

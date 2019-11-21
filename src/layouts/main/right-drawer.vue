@@ -8,14 +8,15 @@
   >
     <div class="q-py-md q-px-lg bg-grey-3">
       <div>
-      <q-input dense standout bg-color="grey-2" label="Search" v-model="text">
-        <template v-slot:prepend>
+        <q-input dense standout bg-color="grey-2" label="Search" v-model="text">
+          <template v-slot:prepend>
            <q-icon name="search" />
-        </template>
-                <template v-slot:append>
+          </template>
+          <template v-slot:append>
            <q-btn />
-        </template>
-      </q-input>
+          </template>
+        </q-input>
+      </div>
     </div>
     <q-list>
       <q-item-label header>Navigation</q-item-label>

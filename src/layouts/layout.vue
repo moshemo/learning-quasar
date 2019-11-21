@@ -49,7 +49,25 @@ export default {
         {
           label: "Advertise",
           icon: "dvr",
-          to: "/advertise"
+          to: "/advertise",
+          subLinks: [
+            {
+              label: 'Events',
+              to: '/advertise/events',
+            },
+            {
+              label: 'Classifieds',
+              to: '/advertise/classifieds',
+            },
+            {
+              label: 'Banner Ads',
+              to: '/advertise/banner-ads',
+            },
+            {
+              label: 'Press Release',
+              to: '/advertise/press-release'
+            }
+          ]
         },
         {
           label: "Newsletter",

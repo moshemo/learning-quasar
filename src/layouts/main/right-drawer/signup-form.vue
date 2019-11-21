@@ -1,17 +1,10 @@
 <template>
-  <div
-    class="q-pt-md bg-green-6 text-grey-2"
-    style="margin: 32px auto; width: 250px;"
-  >
-    <div class="q-pa-md text-center text-grey-2 text-h5 text-weight-medium">
-      The Latest News
-    </div>
+  <div class="q-pt-md bg-green-6 text-grey-2" style="margin: 32px auto; width: 250px;">
+    <div class="q-pa-md text-center text-grey-2 text-h5 text-weight-medium">The Latest News</div>
     <div
-      class="q-mb-lg q-py-sm q-px-md text-center text-h5 text-weight-regular"
-      style="line-height: 1.25"
-    >
-      Signup for Our Newsletter & Stay Up to Date
-    </div>
+      class="q-mb-lg q-py-sm q-px-md text-center text-weight-regular"
+      style="font-size: 22px; line-height: 1.25"
+    >Signup for Our Newsletter & Stay Up to Date</div>
     <q-form class="column items-center" @submit="onSubmit" @reset="onReset">
       <q-input
         borderless

@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lhh lpR lff">
+  <q-layout view="lhh lpr lff">
     <Header @leftDrawerToggled="updateLeftDrawer()" :navLinks="navLinks" />
 
     <LeftDrawer :isOpen="isLeftDrawerOpen" :navLinks="navLinks" />

@@ -1,5 +1,5 @@
 <template>
-  <q-footer class="lt-md">
+  <q-footer>
     <q-tabs>
       <q-route-tab
         v-for="(navLink, index) in navLinks"

@@ -1,24 +1,21 @@
 <template>
-  <q-drawer
-    show-if-above
-    content-class="bg-grey-2"
-    side="right"
-    width="350"
-    v-if="isOpen"
-  >
+  <q-drawer show-if-above content-class="bg-grey-2" side="right" width="350" v-if="isOpen">
     <SearchBar />
     <SignupForm />
     <ArticleList />
+    <Ad />
   </q-drawer>
 </template>
 
 <script>
+import Ad from "./ad";
 import ArticleList from "./article-list";
 import SearchBar from "./search-bar";
 import SignupForm from "./signup-form";
 
 export default {
   components: {
+    Ad,
     ArticleList,
     SearchBar,
     SignupForm

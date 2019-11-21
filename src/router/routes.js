@@ -13,7 +13,23 @@ const routes = [
       },
       {
         path: "/advertise",
-        component: () => import("pages/advertise.vue")
+        component: () => import("pages/advertise/index.vue")
+      },
+      {
+        path: "/advertise/banner-ads",
+        component: () => import("pages/advertise/banner-ads.vue")
+      },
+      {
+        path: "/advertise/classifieds",
+        component: () => import("pages/advertise/classifieds.vue")
+      },
+      {
+        path: "/advertise/events",
+        component: () => import("pages/advertise/events.vue")
+      },
+      {
+        path: "/advertise/press-release",
+        component: () => import("pages/advertise/press-release.vue")
       },
       {
         path: "/newsletter",

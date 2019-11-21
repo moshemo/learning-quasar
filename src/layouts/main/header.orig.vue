@@ -8,25 +8,28 @@
           <q-btn-dropdown
             :label="navLink.label"
             :key="index"
+            :to="navLink.to"
             class="q-pl-lg q-pr-md q-py-md gt-sm"
             size="16px"
             flat
             stretch
           >
-            <q-list>
-              <q-item
-                v-for="(subLink, subIndex) in navLink.subLinks"
-                :key="subIndex"
-                :to="subLink.to"
-                class="q-item--header_custom"
-                clickable
-                v-close-popup
-              >
-                <q-item-section>
-                  <q-item-label>{{subLink.label}}</q-item-label>
-                </q-item-section>
-              </q-item>
-            </q-list>
+            <q-menu class="q-menu--header__custom">
+              <q-list>
+                <q-item
+                  v-for="(subLink, subIndex) in navLink.subLinks"
+                  :key="subIndex"
+                  :to="subLink.to"
+                  class="q-item--header_custom"
+                  clickable
+                  v-close-popup
+                >
+                  <q-item-section>
+                    <q-item-label>{{subLink.label}}</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
           </q-btn-dropdown>
         </template>
 
@@ -82,6 +85,9 @@ export default {
     border-top-left-radius: 0;
   }
 } */
+.q-menu--header__custom {
+  border-radius: 25px;
+}
 .q-item--header_custom:hover {
   background-color: $blue-8;
   color: #fff;
@@ -89,7 +95,6 @@ export default {
 
   .q-focus-helper {
     background-color: inherit !important;
-    font-weight: 600;
   }
 }
 </style>

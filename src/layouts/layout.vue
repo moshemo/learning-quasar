@@ -14,7 +14,7 @@
 import Header from "./main/header";
 import LeftDrawer from "./main/left-drawer";
 import PageContainer from "./main/page-container";
-import RightDrawer from "./main/right-drawer";
+import RightDrawer from "./main/right-drawer/index";
 import Footer from "./main/footer";
 
 export default {
@@ -52,20 +52,20 @@ export default {
           to: "/advertise",
           subLinks: [
             {
-              label: 'Events',
-              to: '/advertise/events',
+              label: "Events",
+              to: "/advertise/events"
             },
             {
-              label: 'Classifieds',
-              to: '/advertise/classifieds',
+              label: "Classifieds",
+              to: "/advertise/classifieds"
             },
             {
-              label: 'Banner Ads',
-              to: '/advertise/banner-ads',
+              label: "Banner Ads",
+              to: "/advertise/banner-ads"
             },
             {
-              label: 'Press Release',
-              to: '/advertise/press-release'
+              label: "Press Release",
+              to: "/advertise/press-release"
             }
           ]
         },
